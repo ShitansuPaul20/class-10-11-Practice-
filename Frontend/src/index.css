@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body , #root{
+  height: 100vh;
+  width: 100vw;
+}
+
+html{
+  background-color: rgb(33, 33, 33);
+  color: rgb(255, 242, 219);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.notes{
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  gap: 15px;
+  padding-block: 1rem;
+  padding-inline: 3rem;
+}
+
+.note{
+  display: flex;
+  width: 500px;
+  flex-direction: column;     
+  min-height: 16rem;
+  flex-shrink: 0;
+  height: 100vh;
+  background-color: rgb(68, 68, 68);
+  height: 9rem;
+  border-radius: 10px;
+  padding: 1rem;
+  
+
+}
+
+p{
+  word-break: break-word;      
+  white-space: normal;
+  overflow: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 8px;
+    display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #2e2e2e; 
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+}
+
+form{
+  display: flex;
+  gap: 20px;
+  padding-block: 1rem;
+  padding-inline: 3rem;
+  align-items: center;
+}
+
+input{
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  padding: 0 4px;
+}
+
+.submit{
+  padding: 2px 5px;
+  border-radius: 8px;
+  border: none;
+  &:active{
+    transform: scale(0.96);
+  }
+}
+
+.delete{
+  padding: 4px 9px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(248, 122, 122);
+  margin: 6px;
+  color: white;
+  &:active{
+    transform: scale(0.96);
+  }
+}
+
+.update{
+  padding: 4px 9px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(64, 132, 102);
+  margin: 6px;
+  color: white;
+  &:active{
+    transform: scale(0.96);
+  }
+}
+
+
+.upad{
+  display: flex;
+  gap: 10px;
+}
+
+.hide{
+  visibility: hidden;
+}
