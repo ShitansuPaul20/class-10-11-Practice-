@@ -6,7 +6,7 @@ const App = () => {
   const [update, setupdate] = useState("")
 
   function fetchNotes(){
-    axios.get("http://localhost:3000/notes/").then((res)=>{
+    axios.get("https://notify-7q9f.onrender.com/notes/").then((res)=>{
       setNotes(res.data.notes)
     })
   }
@@ -22,7 +22,7 @@ const App = () => {
 
     console.log(title.value , description.value)
 
-    axios.post("http://localhost:3000/notes/",{
+    axios.post("https://notify-7q9f.onrender.com/notes/",{
       title: title.value,
       description: description.value,
     }).then((res)=>{
@@ -33,7 +33,7 @@ const App = () => {
  }
 
  function deleteNote(noteId){
-    axios.delete("http://localhost:3000/notes/"+noteId)
+    axios.delete("https://notify-7q9f.onrender.com/notes/"+noteId)
     .then((res)=>{
       console.log(res.data.message)
       fetchNotes()
@@ -45,7 +45,7 @@ const App = () => {
 
     console.log(noteId)
 
-    axios.patch("http://localhost:3000/notes/"+noteId,{
+    axios.patch("https://notify-7q9f.onrender.com/notes/"+noteId,{
       description : update
     })
     .then((res)=>{
